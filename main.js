@@ -34,9 +34,9 @@ function solveBarcodes(dataNeed,barcodes){
             let equalIndex=value.indexOf("=");
             let addIndex=value.indexOf("+");
             comminfo+=(value.substring(0,equalIndex)
-            +" ".padStart(32-equalIndex, " ")
+            +" ".padStart(34-addIndex, " ")//拼空格
             +value.substring(equalIndex+1,addIndex)
-            +"          "
+            +" ".padStart(12-value.length+addIndex, " ")
             +value.substring(addIndex+1)+"\n"
             );
         }
